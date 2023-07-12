@@ -1,1 +1,10 @@
-export const App = () => <h2>Welcome</h2>
+import { Header } from 'layouts'
+import { Title } from 'components'
+
+export const App = () => (
+  <>
+    <Header>
+      <Title />
+    </Header>
+  </>
+)
