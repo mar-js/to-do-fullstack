@@ -1,0 +1,22 @@
+{
+  "name": "to-do-fullstack",
+  "version": "1.0.0",
+  "description": "Project of To Do with client and server development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "vite",
+    "node",
+    "express",
+    "tailwindcss",
+    "typescript",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Martín Agüera (mar-js)",
+  "license": "ISC"
+}
