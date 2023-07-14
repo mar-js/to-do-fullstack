@@ -1,5 +1,4 @@
 import { useToDo } from 'contexts'
-import { ToDoProvider } from 'providers'
 import {
   Header,
   Main,
@@ -16,7 +15,7 @@ export const App: React.FC = () => {
   const { youWillDo } = useToDo()
 
   return (
-    <ToDoProvider>
+    <>
       <Header>
         <Title />
       </Header>
@@ -28,6 +27,6 @@ export const App: React.FC = () => {
           </ListToDo>
         </Section>
       </Main>
-    </ToDoProvider>
+    </>
   )
 }
