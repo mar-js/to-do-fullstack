@@ -9,9 +9,14 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setYouWillDo(prev => ([ ...prev, toDo ]))
   }
 
+  const handleDeleteToDo = (id: IToDo['id']) => {
+    setYouWillDo(prev => ([ ...prev, ...prev.filter(toDo => toDo.id !== id) ]))
+  }
+
   const VALUE: IToDoModel = {
     youWillDo,
-    handleAddToDo
+    handleAddToDo,
+    handleDeleteToDo
   }
 
   return (
