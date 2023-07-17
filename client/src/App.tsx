@@ -12,7 +12,7 @@ import {
 } from 'components'
 
 export const App: React.FC = () => {
-  const { youWillDo } = useToDo()
+  const { youWillDo, handleDeleteToDo } = useToDo()
 
   return (
     <>
@@ -23,7 +23,7 @@ export const App: React.FC = () => {
         <Form />
         <Section>
           <ListToDo>
-            { youWillDo?.map(toDo => <ToDo key={ toDo.id } { ...toDo } />) }
+            { youWillDo?.map(toDo => <ToDo key={ toDo.id } { ...toDo } handleDeleteToDo={ handleDeleteToDo } />) }
           </ListToDo>
         </Section>
       </Main>
