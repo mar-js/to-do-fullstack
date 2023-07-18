@@ -14,7 +14,7 @@ export const Form: React.FC = () => {
 
     handleAddToDo({
       ...TO_DO,
-      id: 111
+      id: Number(new Date())
     })
   }
 
