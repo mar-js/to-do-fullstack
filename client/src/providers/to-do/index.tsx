@@ -13,10 +13,19 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
     setYouWillDo(prev => prev.filter(toDo => toDo.id !== id))
   }
 
+  const handleDeleteFull = () => {
+    const CONFIRM = confirm('Are you sure you want to delete everything?')
+
+    if (!CONFIRM) return null
+
+    return setYouWillDo([])
+  }
+
   const VALUE: IToDoModel = {
     youWillDo,
     handleAddToDo,
-    handleDeleteToDo
+    handleDeleteToDo,
+    handleDeleteFull
   }
 
   return (
