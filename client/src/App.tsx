@@ -5,6 +5,7 @@ import {
   Section
 } from 'layouts'
 import {
+  DeleteFull,
   Form,
   ListToDo,
   Title,
@@ -12,7 +13,11 @@ import {
 } from 'components'
 
 export const App: React.FC = () => {
-  const { youWillDo, handleDeleteToDo } = useToDo()
+  const {
+    youWillDo,
+    handleDeleteToDo,
+    handleDeleteFull
+  } = useToDo()
 
   return (
     <>
@@ -21,6 +26,7 @@ export const App: React.FC = () => {
       </Header>
       <Main>
         <Form />
+        { youWillDo.length > 10 && <DeleteFull handleDeleteFull={ handleDeleteFull } /> }
         <Section>
           <ListToDo>
             { youWillDo?.map(toDo => <ToDo key={ toDo.id } { ...toDo } handleDeleteToDo={ handleDeleteToDo } />) }
