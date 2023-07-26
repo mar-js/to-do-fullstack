@@ -14,3 +14,7 @@ export interface IToDoModel {
 export interface IDeleteFull {
   handleDeleteFull: () => void;
 }
+
+export interface IToDoDescription {
+  title: string;
+}
