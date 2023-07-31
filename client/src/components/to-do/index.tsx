@@ -1,3 +1,4 @@
+import { Link } from 'wouter'
 import { IToDo } from 'interfaces'
 
 export const ToDo: React.FC<IToDo> = ({
@@ -9,7 +10,9 @@ export const ToDo: React.FC<IToDo> = ({
     <h5 className="text-lg mb-5">{ toDo }</h5>
     <div className="flex flex-col gap-2">
       <button className="bg-red-400 text-white w-full p-2" onClick={ () => handleDeleteToDo(id) } type="button">Delete To do</button>
-      <a href={ `/${id}` } className="inline-block text-center w-full cursor-pointer text-sm bg-gray-400 p-2 text-white hover:bg-gray-600">View To do</a>
+      <Link href={ `/${id}` }>
+        <button className="inline-block text-center w-full cursor-pointer text-sm bg-gray-400 p-2 text-white hover:bg-gray-600">View To do</button>
+      </Link>
     </div>
   </li>
 )
