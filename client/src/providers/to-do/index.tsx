@@ -25,12 +25,23 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
     return youWillDo.find(toDo => toDo.id === id && toDo)
   }
 
+  const getTitleToDo = (id: IToDo['id']) => {
+    const TO_DO = getToDo(id)
+
+    if (!TO_DO) return 'Not found'
+
+    const { toDo } = TO_DO
+
+    return toDo
+  }
+
   const VALUE: IToDoModel = {
     youWillDo,
     handleAddToDo,
     handleDeleteToDo,
     handleDeleteFull,
-    getToDo
+    getToDo,
+    getTitleToDo
   }
 
   return (
