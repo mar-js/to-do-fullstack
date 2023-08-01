@@ -21,11 +21,16 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
     return setYouWillDo([])
   }
 
+  const getToDo = (id: IToDo['id']) => {
+    return youWillDo.find(toDo => toDo.id === id && toDo)
+  }
+
   const VALUE: IToDoModel = {
     youWillDo,
     handleAddToDo,
     handleDeleteToDo,
-    handleDeleteFull
+    handleDeleteFull,
+    getToDo
   }
 
   return (
