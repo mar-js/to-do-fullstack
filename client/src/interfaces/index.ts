@@ -10,6 +10,7 @@ export interface IToDoModel {
   handleDeleteToDo: (id: IToDo['id']) => void;
   handleDeleteFull: () => void;
   getToDo: (id: IToDo['id']) => IToDo | undefined;
+  getTitleToDo: (id: IToDo['id']) => string;
 }
 
 export interface IDeleteFull {
