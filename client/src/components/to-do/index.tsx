@@ -13,6 +13,9 @@ export const ToDo: React.FC<IToDo> = ({
       <Link href={ `/${id}` }>
         <button className="inline-block text-center w-full cursor-pointer text-sm bg-gray-400 p-2 text-white hover:bg-gray-600">View To do</button>
       </Link>
+      <Link href={ `/edit/${id}` }>
+        <button className="inline-block text-center w-full cursor-pointer text-sm bg-green-400 p-2 text-white hover:bg-green-600">Edit To do</button>
+      </Link>
     </div>
   </li>
 )
