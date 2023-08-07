@@ -1,3 +1,5 @@
+import { PropsWithChildren } from 'react'
+
 export interface IToDo {
   id: number;
   toDo: string;
@@ -19,4 +21,8 @@ export interface IDeleteFull {
 
 export interface IToDoDescription {
   title: string;
+}
+
+export interface IToDoButton extends PropsWithChildren {
+  color: string;
 }
