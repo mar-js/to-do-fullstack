@@ -25,4 +25,5 @@ export interface IToDoDescription {
 
 export interface IToDoButton extends PropsWithChildren {
   color: string;
+  handleClick?: () => void;
 }
