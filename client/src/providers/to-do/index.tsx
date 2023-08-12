@@ -10,7 +10,7 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
   }
 
   const handleDeleteToDo = (id: IToDo['id']) => {
-    setYouWillDo(prev => ([ ...prev, ...prev.filter(toDo => toDo.id !== id) ]))
+    setYouWillDo(prev => prev.filter(toDo => toDo.id !== id))
   }
 
   const VALUE: IToDoModel = {
