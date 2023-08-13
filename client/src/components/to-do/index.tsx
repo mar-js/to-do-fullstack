@@ -1,6 +1,6 @@
 import { Link } from 'wouter'
-import { IToDo } from 'interfaces'
 import { ToDoButton } from 'components'
+import { IToDo } from 'interfaces'
 
 export const ToDo: React.FC<IToDo> = ({
   id,
