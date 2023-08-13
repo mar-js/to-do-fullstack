@@ -5,5 +5,5 @@ export const ToDoButton: React.FC<IToDoButton> = ({
   children,
   handleClick
 }) => (
-  <button className={ `text-center w-full cursor-pointer text-md bg-${color}-400 p-2 text-white hover:bg-${color}-600` } onClick={ handleClick } type="button">{ children } To do</button>
+  <button className={ `text-center w-full cursor-pointer text-md bg-${color}-400 p-2 text-white hover:bg-${color}-600` } onClick={ handleClick } type="button">{ `${children} To do` }</button>
 )
