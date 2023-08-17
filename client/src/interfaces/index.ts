@@ -3,7 +3,6 @@ import { PropsWithChildren } from 'react'
 export interface IToDo {
   id: number;
   toDo: string;
-  handleDeleteToDo: (id: IToDo['id']) => void;
 }
 
 export interface IToDoModel {
