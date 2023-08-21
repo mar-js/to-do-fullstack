@@ -1,4 +1,3 @@
-import { ToDoButton } from 'components'
 import { IToDo } from 'interfaces'
 
 export const ToDo: React.FC<IToDo> = ({
@@ -9,9 +8,9 @@ export const ToDo: React.FC<IToDo> = ({
     <h5 className="text-2xl mb-5">{ toDo }</h5>
     <div className="flex flex-col gap-2">
       { /* NOT FUNCA DELETE  */ }
-      <ToDoButton classN="bg-red-400 hover:bg-red-600">Delete</ToDoButton>
-      <ToDoButton classN="bg-gray-400 hover:bg-gray-600" url={ `/${id}` }>View</ToDoButton>
-      <ToDoButton classN="bg-green-400 hover:bg-green-600" url={ `/edit/${id}` }>Edit</ToDoButton>
+      <button className="text-white py-2 font-semibold bg-red-400 hover:bg-red-600">Delete</button>
+      <button className="text-white py-2 font-semibold bg-gray-400 hover:bg-gray-600">View</button>
+      <button className="text-white py-2 font-semibold bg-green-400 hover:bg-green-600">Edit</button>
     </div>
   </li>
 )
