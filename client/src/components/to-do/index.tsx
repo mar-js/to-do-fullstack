@@ -7,7 +7,6 @@ export const ToDo: React.FC<IToDo> = ({
   <li className="p-5 border">
     <h5 className="text-2xl mb-5">{ toDo }</h5>
     <div className="flex flex-col gap-2">
-      { /* NOT FUNCA DELETE  */ }
       <button className="text-white py-2 font-semibold bg-red-400 hover:bg-red-600">Delete</button>
       <button className="text-white py-2 font-semibold bg-gray-400 hover:bg-gray-600">View</button>
       <button className="text-white py-2 font-semibold bg-green-400 hover:bg-green-600">Edit</button>
