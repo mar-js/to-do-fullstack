@@ -1,5 +1,5 @@
 import { Route } from 'wouter'
-import { Home, ToDo } from 'pages'
+import { Home } from 'pages'
 import { Header } from 'layouts'
 import { Title } from 'components'
 
@@ -11,9 +11,6 @@ export const App: React.FC = () => {
       </Header>
       <Route path="/">
         <Home />
-      </Route>
-      <Route path="/:toDo">
-        <ToDo />
       </Route>
     </>
   )
