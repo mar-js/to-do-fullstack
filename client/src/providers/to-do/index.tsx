@@ -4,6 +4,7 @@ import { IToDo, IToDoModel } from 'interfaces'
 
 export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [ youWillDo, setYouWillDo ] = useState([] as IToDo[])
+  const [ openDetails, setOpenDetails ] = useState(false)
 
   const handleAddToDo = (toDo: IToDo) => {
     setYouWillDo(prev => ([ ...prev, toDo ]))
@@ -35,8 +36,14 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
     return toDo
   }
 
+  const handleOpenDetails = () => {
+    setOpenDetails(prev => !prev)
+  }
+
   const VALUE: IToDoModel = {
     youWillDo,
+    openDetails,
+    handleOpenDetails,
     handleAddToDo,
     handleDeleteToDo,
     handleDeleteFull,
