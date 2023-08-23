@@ -7,6 +7,8 @@ export interface IToDo {
 
 export interface IToDoModel {
   youWillDo: IToDo[];
+  openDetails: boolean;
+  handleOpenDetails: () => void;
   handleAddToDo: (toDo: IToDo) => void;
   handleDeleteToDo: (id: IToDo['id']) => void;
   handleDeleteFull: () => void;
