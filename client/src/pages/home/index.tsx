@@ -15,7 +15,8 @@ import {
 export const Home: React.FC = () => {
   const {
     youWillDo,
-    handleDeleteFull
+    handleDeleteFull,
+    handleOpenDetails
   } = useToDo()
 
   return (
@@ -28,7 +29,7 @@ export const Home: React.FC = () => {
         { youWillDo.length > 10 && <DeleteFull handleDeleteFull={ handleDeleteFull } /> }
         <Section>
           <ListToDo>
-            { youWillDo?.map(toDo => <ToDo key={ toDo.id } { ...toDo } />) }
+            { youWillDo?.map(toDo => <ToDo key={ toDo.id } { ...toDo } handleOpenDetails={ handleOpenDetails } />) }
           </ListToDo>
         </Section>
       </Main>
