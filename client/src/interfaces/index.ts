@@ -3,6 +3,7 @@ import { PropsWithChildren } from 'react'
 export interface IToDo {
   id: number;
   toDo: string;
+  handleOpenDetails: () => void;
 }
 
 export interface IToDoModel {
