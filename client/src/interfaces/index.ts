@@ -3,14 +3,13 @@ import { PropsWithChildren } from 'react'
 export interface IToDo {
   id: number;
   toDo: string;
-  handleOpenDetails: () => void;
+  handleDeleteToDo: (id: IToDo['id']) => void;
 }
 
 export interface IToDoModel {
   youWillDo: IToDo[];
-  openDetails: boolean;
-  handleOpenDetails: () => void;
   handleAddToDo: (toDo: IToDo) => void;
+  handleEditToDo: (toDo: IToDo) => void;
   handleDeleteToDo: (id: IToDo['id']) => void;
   handleDeleteFull: () => void;
   getToDo: (id: IToDo['id']) => IToDo | undefined;
@@ -28,4 +27,17 @@ export interface IToDoDescription {
 export interface IToDoButton extends PropsWithChildren {
   url?: string;
   classN: string;
+}
+
+export interface IView {
+  id: string;
+}
+
+export interface IForm {
+  id?: number;
+  isEdit?: boolean;
+}
+
+export interface IEdit {
+  id: string;
 }
