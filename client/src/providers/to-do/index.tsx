@@ -1,9 +1,14 @@
-import { useState, type PropsWithChildren } from 'react'
+import {
+  useState,
+  PropsWithChildren,
+  useEffect
+} from 'react'
 import { ToDoModel } from 'contexts'
 import { IToDo, IToDoModel } from 'interfaces'
 
 export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [ youWillDo, setYouWillDo ] = useState([] as IToDo[])
+  const youWillDoStorage = localStorage.getItem('youWillDo') || '[]'
+  const [ youWillDo, setYouWillDo ] = useState(JSON.parse(youWillDoStorage) as IToDo[])
 
   const handleAddToDo = (toDo: IToDo) => {
     setYouWillDo(prev => ([ ...prev, toDo ]))
@@ -38,6 +43,10 @@ export const ToDoProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
     return toDo
   }
+
+  useEffect(() => {
+    localStorage.setItem('youWillDo', JSON.stringify(youWillDo))
+  }, [ youWillDo ])
 
   const VALUE: IToDoModel = {
     youWillDo,
