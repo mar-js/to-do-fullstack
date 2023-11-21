@@ -1,5 +1,13 @@
-import { Header, Main } from 'layouts'
-import { Form, Title } from 'components'
+import {
+  Header,
+  Main,
+  Section
+} from 'layouts'
+import {
+  Form,
+  ListToDo,
+  Title
+} from 'components'
 
 export const App: React.FC = () => (
   <>
@@ -8,6 +16,11 @@ export const App: React.FC = () => (
     </Header>
     <Main>
       <Form />
+      <Section>
+        <ListToDo>
+          ..
+        </ListToDo>
+      </Section>
     </Main>
   </>
 )
